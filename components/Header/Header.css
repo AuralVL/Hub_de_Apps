@@ -1,0 +1,23 @@
+/*Arregla estos estilos en cuanto termines, por el amor de dios*/
+div {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}   
+
+#colorBtn{
+    padding: 0.4rem;
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
+    filter: opacity(50%);
+    border: 0.5px solid whitesmoke;
+    transition: 0.5s ease-in-out;
+}
+
+#colorBtn:hover{
+    filter: opacity(100%)
+}

@@ -1,0 +1,38 @@
+/*Arregla estos estilos en cuanto termines, por el amor de dios*/
+#home{
+    background-color: whitesmoke;
+    min-height: 73vh;
+}
+
+.hello{
+    margin: auto;
+    color: rgba(61, 163, 197, 0.721);
+    transition: 0.5s ease-in-out;
+    height: 5rem;
+    font-size: 50px;
+}
+
+.hub{
+    height: 30rem;
+    display:grid;
+    justify-content: center;
+}
+
+#pokecard{
+    margin: auto;
+    height: 300px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    background-color: lightcoral;
+    transition: .3s ease-in-out;
+}
+
+#pokecard:hover{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    transform: scale(1.1);
+}
+
+img{
+    max-width: 150px;
+}
