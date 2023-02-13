@@ -1,6 +1,51 @@
-
-#poke{
+section{
     background-color: whitesmoke;
     min-height: 73vh;
+    margin: auto;
+}
+
+#pokeContainer{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+section > h1{
+    color: rgba(61, 163, 197, 0.721);
+    font-size: 40px;
+    transition: 0.5s ease-in-out;
+    margin-left: 10px;
+}
+
+#card{
+    background: linear-gradient(150deg, rgb(80, 183, 80) 40%, whitesmoke 40%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    margin-right: 20px;
+    position: relative;
+    width: 360px;
+    height: 500px;
+    box-shadow: 1px 1px 33px -12px rgba(69,69,69,1);
+    border-radius: 10px;
+}
+#card h2{
+    color: black;
+    position: relative;
+    height: 200px;
+    width: auto;
+    margin:auto;
+}
+
+#card img{
+    border-radius: 60px;
+    width: 500px;
+    height: 250px;
+    position: relative;
+    margin: 30px auto;
 }
 
