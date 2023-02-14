@@ -14,7 +14,27 @@ const template = () =>
     `
 ;
 
+
 let dataList = [];
+
+const typeColor = {
+    grass: "#6daa4b",
+    fire: "#d74e4a",
+    water: "#0383fd",
+    bug: "#b2e85d",
+    normal: "#77767c",
+    poison: "#a15fc9",
+    electric: "#ffe234",
+    ground: "#7b4624",
+    fairy: "#f49bbf",
+    fighting: "#ffbb52",
+    psychic: "#ff6d86",
+    rock: "#8f8377",
+    ghost: "#630975",
+    ice: "#78ffff",
+    dragon: "#12417a",
+};
+
 
 const getData = async () => {
     for(let id = 1; id <= 151; id++){
@@ -41,6 +61,7 @@ const mapData = (pokemons) => {
         moves: pokemon.moves
     }));
     printPokemon(mappedPokemons);
+    changeColorCard(); //Cambiamos el color cuando las cards ya estén pintadas
 }
 
 //Pintar
@@ -48,7 +69,7 @@ const printPokemon = (mappedPokemons) => {
     const container = document.querySelector("#pokeContainer");
     mappedPokemons.map((pokemon) => {
         container.innerHTML += `
-            <div id="card">
+            <div id="card" class="${pokemon.type[0].type.name}">
                 <img src=${pokemon.image} alt=${pokemon.name}/>
                 <h2>${pokemon.name}</h2>
                 <div id="type">
@@ -61,6 +82,17 @@ const printPokemon = (mappedPokemons) => {
             </div>
         `;
     });
+}
+
+const changeColorCard = () => {
+    for (const color in typeColor) {
+        //Construimos cómo se llama la clase
+        let themeColor = `.${color}`;
+        let card = document.querySelectorAll(themeColor);
+        card.forEach(element => {
+            element.style.background = `linear-gradient(160deg, ${typeColor[color]} 40%, whitesmoke 40%)`;
+        });
+    }
 }
 
 export const printTemplate = () => {
