@@ -10,7 +10,7 @@
 body{
   background-color: rgba(61, 163, 197, 0.721);
   transition: 0.5s ease-in-out;
-  color:rgba(61, 163, 197, 0.721);
+  color: black;
 }
 
 button{

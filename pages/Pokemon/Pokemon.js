@@ -49,13 +49,14 @@ const printPokemon = (mappedPokemons) => {
     mappedPokemons.map((pokemon) => {
         container.innerHTML += `
             <div id="card">
-                <img class="imagePokemon" src=${pokemon.image} alt=${pokemon.name}/>
+                <img src=${pokemon.image} alt=${pokemon.name}/>
                 <h2>${pokemon.name}</h2>
-                <div>
-                    <p id="type">${pokemon.type[0].type.name}</p>
-                    <div class="moves">
-                        ${pokemon.moves.splice(0, 3).map((move) => (`<p>${move.move.name}</p>`))}
-                    </div>
+                <div id="type">
+                    <img src="https://cdn-icons-png.flaticon.com/512/31/31714.png" alt="icon">
+                    <p>${pokemon.type[0].type.name}</p>
+                </div>
+                <div class="moves">
+                    ${pokemon.moves.splice(0, 3).map((move) => (`<p>${move.move.name}</p>`))}
                 </div>
             </div>
         `;
