@@ -4,7 +4,7 @@
     max-width: 50vh;
     color: whitesmoke;
     border-radius: 0.5rem;
-    background-image: linear-gradient(rgba(176, 174, 174, 0.792), rgba(d176, 174, 174, 0.792));
+    background: none;
     align-items: center;
     -webkit-box-shadow: 10px 10px 71px 0px rgba(0,0,0,0.53);
     -moz-box-shadow: 10px 10px 71px 0px rgba(0,0,0,0.53);
@@ -14,7 +14,8 @@
   display: grid;
   justify-content: center;
 }
-h1{
+
+#loginTitle{
   margin: auto;
   margin-bottom: 1.5rem;
   font-size: 28px;
@@ -28,11 +29,11 @@ form{
 
 label{
   padding: 1px;
+  color: whitesmoke;
 }
 input{
   border: none;
   border-radius: 0.3rem;
-  background-color: whitesmoke;
 }
 
 #loginBtn{
@@ -43,6 +44,7 @@ input{
   background: none;
   border: 1px solid whitesmoke;
   filter: opacity(50%);
+  border-radius: 4px;
 }
 
 #loginBtn:hover{

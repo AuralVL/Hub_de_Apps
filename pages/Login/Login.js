@@ -4,7 +4,7 @@ import "./Login.css";
 const template = () => `
 <section class="login">
     <div class="form">
-        <h1>Login</h1>
+        <h1 id="loginTitle">Login</h1>
         <form>
             <label for="username">Usuario</label>
             <input type="text" id="loginInput" maxlength="20" required>
@@ -23,17 +23,6 @@ const addListener = () => {
         initContent();
     });
 }
-
-/*const check = () => {
-    const loginInput = document.querySelector("#loginInput");
-    
-    if(loginInput.value.length == 0){
-        alert("Por favor, añada un nombre de usuario");
-    }else{
-        localStorage.setItem("user", JSON.stringify(user.value));
-        console.log(localStorage.user);
-    }
-};*/
 
 export const printTemplate = () => {
     document.querySelector("#app").innerHTML = template();

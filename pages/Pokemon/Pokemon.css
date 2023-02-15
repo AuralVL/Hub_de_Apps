@@ -1,6 +1,6 @@
 section{
     background-color: whitesmoke;
-    min-height: 73vh;
+    min-height: 75vh;
     margin: auto;
 }
 
@@ -49,13 +49,25 @@ section > h1{
 }
 
 #type{
-    display: flex;
-    align-items: center;
+    padding: 0px;
+    width: 90px;
+    border-radius: 30px;
+}
+
+#type p{
+    margin: auto;
+    color: whitesmoke
+}
+.moves{
     padding: 0px;
 }
-#type img{
-    opacity: 80%;
-    width: 18px;
-    height: 18px;
+.hw{
+    padding: 0px;
+    display: flex;
+    gap: 10px;
+}
+.hw > span:first-child{
+    padding-right: 10px;
+    border-right: 2px solid black;
 }
 

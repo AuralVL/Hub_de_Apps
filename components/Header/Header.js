@@ -23,7 +23,7 @@ const changeColor = () => {
     
     document.body.style.background = newColor;
     document.querySelector("#colorBtn").style.color = newColor;
-    document.querySelector("h1").style.color= newColor;
+    document.querySelector(".hello").style.color= newColor;
 }
 
 export const printTemplate = () => {

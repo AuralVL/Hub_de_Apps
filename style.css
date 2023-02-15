@@ -17,8 +17,13 @@ button{
   color: rgba(61, 163, 197, 0.721);
 }
 
-
 li{
   list-style-type: none;
 }
+
+header{
+  height: 100px;
+}
+
+
 
