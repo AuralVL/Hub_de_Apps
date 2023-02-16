@@ -48,7 +48,6 @@ const getData = async () => {
         };
     };
     mapData(dataList); //pokemons
-    printFilteredPokemon(dataList);
 };
 
 //Mapear 
@@ -103,24 +102,36 @@ const changeColorCard = () => {
 };
 
 const filter = (pokemonName) => {
-    console.log(dataList);
-    const filteredPokemons = dataList.filter((pokemon) => pokemon.name.includes(pokemonName.toLowerCase()));
+    const filteredPokemons = mappedPokemons.filter((pokemon) => pokemon.name.includes(pokemonName.toLowerCase()));
+    console.log(filteredPokemons);
     printPokemon(filteredPokemons);
+    changeColorCard();
 };
 
-const printFilteredPokemon = (pokemonName) => {
+const addListeners = () => {
+    const searchInput = document.querySelector("#searchInput");
+    const searchBtn = document.querySelector("#searchBtn");
+    searchBtn.addEventListener("click", () => {
+        document.querySelector("#pokeContainer").innerHTML = "";
+        filter(searchInput.value);
+        console.log(document.querySelector("#pokeContainer").innerHTML);
+    });
+};
+/* const printFilteredPokemon = (pokemonName) => {
  const searchInput = document.querySelector("#searchInput");
  const searchBtn = document.querySelector("#searchBtn");
 
  searchBtn.addEventListener("click", () => {
     document.querySelector("#pokeContainer").innerHTML = "";
     filter(searchInput.value);
+    console.log(document.querySelector("#pokeContainer").innerHTML);
  });
-};
+}; */
 
 export const printTemplate = () => {
     document.querySelector("#app").innerHTML = template();
     getData();
+    addListeners();
 };
 
 
