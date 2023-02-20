@@ -5,18 +5,18 @@ const template = () => `
 <section id="home">
         <h1 class="hello">¡Hola, ${localStorage.getItem("user")}!</h1>
         <div class="hub">
-            <button id="pokecard">
-                <img src="https://www.freepnglogos.com/uploads/black-pokemon-logo-transparent-27.png"/>
-                <a href="#" id="pokelink></a>
-            </button>
-            <button>aaa</button>
+            <ul>
+                <li><a href="#" id="pokelink">Pokédex</a></li>
+                <li>PokeQuiz</li>
+            </ul>
         </div>
+        <img src="https://res.cloudinary.com/dbumm5v2e/image/upload/v1676909414/charmander_qkuzlo.png">
 </section>
 `;
 
 const addListeners = () => {
    document
-   .querySelector("#pokecard")
+   .querySelector("#pokelink")
    .addEventListener("click", () => initContent("Pokemon"));
 }
 

@@ -1,39 +1,55 @@
 /*Arregla estos estilos en cuanto termines, por el amor de dios*/
 #home{
-    background-color: whitesmoke;
-    min-height: 73vh;
+    padding: 0 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 5px;
 }
 
 .hello{
-    margin: auto;
-    color: rgba(61, 163, 197, 0.721);
+    color:rgb(56, 56, 56);
     transition: 0.5s ease-in-out;
-    height: 5rem;
-    font-size: 70px;
-    margin-left: 10px;
+    height: 7rem;
+    width: 40rem;
+    font-size: 105px;
+    grid-column: 1;
+    grid-row: 1;
 }
 
 .hub{
-    height: 30rem;
-    display:grid;
+    margin: auto;
+    grid-column: 1;
+    grid-row: 1/2;
     justify-content: center;
 }
 
-#pokecard{
+li{
     margin: auto;
-    height: 300px;
-    width: 200px;
-    border: none;
-    border-radius: 5px;
-    background-color: lightcoral;
     transition: .3s ease-in-out;
+    font-size: 40px;
+    color: rgba(44, 44, 44, 0.884);
 }
 
-#pokecard:hover{
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+li:hover{
     transform: scale(1.1);
 }
 
-.hub img{
-    max-width: 150px;
+.two{
+    border: 2px solid red;
+    grid-column: 2;
+    grid-row: 1/2;
+    margin-top: auto;
+    width: 600px;
+    height: 600px;
+    justify-content: center;
+}
+
+img{
+    grid-column: 2;
+    grid-row: 1/2;
+    margin-top: auto;
+    width: 600px;
+    height: 600px;
+    justify-content: center;
 }

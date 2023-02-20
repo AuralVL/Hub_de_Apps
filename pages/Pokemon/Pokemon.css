@@ -1,7 +1,18 @@
-section{
-    background-color: whitesmoke;
-    min-height: 75vh;
-    margin: auto;
+section > h1{
+    color:rgb(56, 56, 56);
+    font-size: 40px;
+    transition: 0.5s ease-in-out;
+    margin-left: 10px;
+}
+.search{
+    display: flex;
+    justify-content: center;
+    margin: 0 0 40px;
+}
+#searchInput{
+    width: 10rem;
+    height: 2rem;
+    text-align: center; 
 }
 
 #pokeContainer{
@@ -13,20 +24,13 @@ section{
     margin: auto;
 }
 
-section > h1{
-    color: black;
-    font-size: 40px;
-    transition: 0.5s ease-in-out;
-    margin-left: 10px;
-}
-
 #card{
     display: flex;
     flex-direction: column;
-    margin-right: 20px;
+    margin: 10px;
     align-items: center;
     width: 300px;
-    height: 490px;
+    height: 350px;
     box-shadow: 1px 1px 33px -12px rgba(69,69,69,1);
     border-radius: 10px;
     transition: .5s ease;   
@@ -39,27 +43,55 @@ section > h1{
 #card h2{
     color: black;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 #card img{
-    display: block;
-    width: 180px;
-    max-height: 200px;
+    width: 200px;
+    height: 200px;
+    padding: 0;
+    margin: 0;
 }
 
 #type{
     padding: 0px;
+    margin: 10px;
     width: 90px;
     border-radius: 30px;
 }
 
 #type p{
+    text-align: center;
     margin: auto;
     color: whitesmoke
 }
-.moves{
+
+.hw{
     padding: 0px;
+    display: flex;
+    gap: 10px;
+}
+
+.hw span > p{
+    font-size: 12px
+}
+.hw > span:first-child{
+    border-right: 2px solid black;
+}
+
+.abilities{
+    padding: 0px;
+    margin: 10px;
+    width: 290px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.abilities p{
+    text-align: center;
+    width: 100px;
+    border-radius: 30px;
 }
 .hw{
     padding: 0px;

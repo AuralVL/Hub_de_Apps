@@ -4,16 +4,14 @@ const template = () =>
     `
     <section>
         <h1>Pokédex</h1>
-        <div>
+        <div class="search">
             <input type="text" id="searchInput" placeholder="Buscar Pokémon">
-            <button id="searchBtn">Buscar</button>
         </div>
         <div id="pokeContainer">
         </div>
     </section>
     `
 ;
-
 
 let dataList = [];
 
@@ -60,7 +58,7 @@ const mapData = (pokemons) => {
         type: pokemon.types[0].type.name,
         height: pokemon.height,
         weight: pokemon.weight,
-        moves: pokemon.moves,
+        abilities: pokemon.abilities,
     }));
     printPokemon(mappedPokemons);
     changeColorCard(); //Cambiamos el color cuando las cards ya estén pintadas
@@ -78,16 +76,23 @@ const printPokemon = (mappedPokemons) => {
                     <p>${pokemon.type}</p>
                 </div>
                 <div class="hw">
-                    <span>Altura: ${pokemon.height / 10} m</span>
-                    <span>Peso: ${pokemon.weight / 10} kg</span>
-                </div>
-                <div class="moves">
-                    ${pokemon.moves.splice(0, 3).map((move) => (`<p>${move.move.name}</p>`))}
+                    <span>
+                        ${pokemon.height / 10} m
+                        <p>Height</p>
+                    </span>
+                    <span>
+                    ${pokemon.weight / 10} kg
+                    <p>Weight</p>
+                    </span>
                 </div>
             </div>
         `;
     });
 }
+/*/<p>Habilidades:</p>
+<div class="abilities">
+${pokemon.abilities.map((ability) => (`<p>${ability.ability.name}</p>`)).join(' ')}
+</div> */
 //${pokemon.moves.splice(0, 3).map((move) => (`<p>${move.move.name}</p>`))}
 const changeColorCard = () => {
     for (const color in typeColor) {
@@ -103,30 +108,17 @@ const changeColorCard = () => {
 
 const filter = (pokemonName) => {
     const filteredPokemons = mappedPokemons.filter((pokemon) => pokemon.name.includes(pokemonName.toLowerCase()));
-    console.log(filteredPokemons);
     printPokemon(filteredPokemons);
     changeColorCard();
 };
 
 const addListeners = () => {
     const searchInput = document.querySelector("#searchInput");
-    const searchBtn = document.querySelector("#searchBtn");
-    searchBtn.addEventListener("click", () => {
+    searchInput.addEventListener("input", (ev) => {
         document.querySelector("#pokeContainer").innerHTML = "";
         filter(searchInput.value);
-        console.log(document.querySelector("#pokeContainer").innerHTML);
     });
 };
-/* const printFilteredPokemon = (pokemonName) => {
- const searchInput = document.querySelector("#searchInput");
- const searchBtn = document.querySelector("#searchBtn");
-
- searchBtn.addEventListener("click", () => {
-    document.querySelector("#pokeContainer").innerHTML = "";
-    filter(searchInput.value);
-    console.log(document.querySelector("#pokeContainer").innerHTML);
- });
-}; */
 
 export const printTemplate = () => {
     document.querySelector("#app").innerHTML = template();

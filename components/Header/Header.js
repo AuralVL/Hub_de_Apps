@@ -1,5 +1,4 @@
 import "./Header.css";
-import "../../pages/Home/Home.css";
 
 const template = () => `
 <div>
@@ -23,7 +22,6 @@ const changeColor = () => {
     
     document.body.style.background = newColor;
     document.querySelector("#colorBtn").style.color = newColor;
-    document.querySelector(".hello").style.color= newColor;
 }
 
 export const printTemplate = () => {

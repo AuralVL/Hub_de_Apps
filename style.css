@@ -12,6 +12,20 @@ body{
   transition: 0.5s ease-in-out;
   color: black;
 }
+header{
+  height: 10vh;
+}
+footer{
+  height: 10vh;
+}
+section{
+  min-height: 60vh;
+  background: rgba(242, 242, 242, 0.597);
+  backdrop-filter: blur( 11.5px );
+  -webkit-backdrop-filter: blur( 11.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
 
 button{
   color: rgba(61, 163, 197, 0.721);
@@ -21,9 +35,11 @@ li{
   list-style-type: none;
 }
 
-header{
-  height: 100px;
+a:link, a:visited, a:active{
+  text-decoration: none;
+  color: rgba(44, 44, 44, 0.884);
 }
+
 
 
 

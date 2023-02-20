@@ -1,15 +1,15 @@
 /*Arregla estos estilos en cuanto termines*/
-div {
-    padding: 2rem;
-    margin-bottom: 2rem;
+header > div{
     display: flex;
     align-items: center;
     justify-content: flex-end;
     position: relative;
+    height: 10vh;
+    padding-right: 10px;
 }   
 
 #colorBtn{
-    padding: 0.4rem;
+    padding: 0.2rem;
     border-radius: 7px 7px 7px 7px;
     -moz-border-radius: 7px 7px 7px 7px;
     -webkit-border-radius: 7px 7px 7px 7px;
