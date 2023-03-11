@@ -8,27 +8,41 @@
 }
 
 body{
-  background-color: rgba(61, 163, 197, 0.721);
+  background: cadetblue;
   transition: 0.5s ease-in-out;
-  color: black;
-}
-header{
-  height: 10vh;
-}
-footer{
-  height: 10vh;
-}
-section{
-  min-height: 60vh;
-  background: rgba(242, 242, 242, 0.597);
-  backdrop-filter: blur( 11.5px );
-  -webkit-backdrop-filter: blur( 11.5px );
-  border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  color: rgb(56, 56, 56);
 }
 
-button{
-  color: rgba(61, 163, 197, 0.721);
+button {
+	appearance: none;
+	background-color: transparent;
+	border: 2px solid rgb(56, 56, 56);
+	border-radius: 0.9375em;
+	box-sizing: border-box;
+	color: rgb(56, 56, 56);
+	cursor: pointer;
+	display: inline-block;
+	font-size: 13px;
+	line-height: normal;
+	margin: 0;
+	min-height: 3em;
+	min-width: 0;
+	outline: none;
+	text-align: center;
+	text-decoration: none;
+	font-weight: 600;
+	transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+	user-select: none;
+  	backdrop-filter: blur( 7.5px );
+   }
+   
+button:disabled {
+	pointer-events: none;
+}
+   
+button:hover {
+	color: whitesmoke;
+	background-color:rgb(56, 56, 56);
 }
 
 li{

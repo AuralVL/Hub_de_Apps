@@ -1,10 +1,16 @@
+
 .login{
     margin: auto;
     padding: 4rem;
-    max-width: 50vh;
-    color: whitesmoke;
+    width: 50vh;
+    height: 80vh;
     border-radius: 0.5rem;
-    background: none;
+    background-image: url('https://res.cloudinary.com/dbumm5v2e/image/upload/v1676970652/Mi_proyecto_1_1_ysbii4.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 30rem;
+    background-position-x: 3rem;
+    background-position-y: 4.3rem;
     align-items: center;
     -webkit-box-shadow: 10px 10px 71px 0px rgba(0,0,0,0.53);
     -moz-box-shadow: 10px 10px 71px 0px rgba(0,0,0,0.53);
@@ -18,8 +24,7 @@
 #loginTitle{
   margin: auto;
   margin-bottom: 1.5rem;
-  font-size: 28px;
-  color: whitesmoke;
+  font-size: 32.5px;
 }
 
 form{
@@ -28,26 +33,19 @@ form{
 }
 
 label{
+  margin: auto;
   padding: 1px;
-  color: whitesmoke;
 }
 input{
+  background: rgba(56, 56, 56, 0.118);
+  backdrop-filter: blur( 7.5px );
   border: none;
   border-radius: 0.3rem;
+  margin-bottom: 25px;
+  padding: 5px;
+  width: 15em;
+  text-align: center;
+  color: rgb(56, 56, 56);
 }
 
-#loginBtn{
-  margin: 2rem;
-  max-width: 100px;
-  color: whitesmoke;
-  padding: 0.5rem;
-  background: none;
-  border: 1px solid whitesmoke;
-  filter: opacity(50%);
-  border-radius: 4px;
-}
 
-#loginBtn:hover{
-  filter: opacity(100%);
-  transition: all 0.3s ease-in-out;
-}

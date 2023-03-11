@@ -2,13 +2,21 @@ import "./Pokemon.css";
 
 const template = () => 
     `
-    <section>
-        <h1>Pokédex</h1>
-        <div class="search">
-            <input type="text" id="searchInput" placeholder="Buscar Pokémon">
+    <section id="pagePokemon">
+        <div class="flex-container">
+            <div class="content-bg">
+                <img src="https://res.cloudinary.com/dbumm5v2e/image/upload/v1678527408/img_174253_jdsbds.png" alt="pokeball image">
+            </div>
+            <div class="container-input">
+                <input type="text" placeholder="Buscar Pokémon" name="text" class="input">
+                <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z" fill-rule="evenodd"></path>
+                </svg>
+            </div>
+            <div id="filterButton"></div>
         </div>
-        <div id="pokeContainer">
-        </div>
+            <div id="pokeContainer">
+            </div>
     </section>
     `
 ;
@@ -16,21 +24,21 @@ const template = () =>
 let dataList = [];
 
 const typeColor = {
-    grass: "#6daa4b",
-    fire: "#d74e4a",
-    water: "#0383fd",
-    bug: "#b2e85d",
-    normal: "#77767c",
-    poison: "#a15fc9",
-    electric: "#ffe234",
-    ground: "#7b4624",
-    fairy: "#f49bbf",
-    fighting: "#ffbb52",
-    psychic: "#ff6d86",
-    rock: "#8f8377",
-    ghost: "#630975",
-    ice: "#78ffff",
-    dragon: "#12417a",
+    grass: "#16C172",
+    fire: "#EF271B",
+    water: "#4361EE",
+    bug: "#059669",
+    normal: "#C18CBA",
+    poison: "#6E44FF",
+    electric: "#FFBF00",
+    ground: "#885629",
+    fairy: "#EE4268",
+    fighting: "#C75000",
+    psychic: "#DB00B6",
+    rock: "#63320B",
+    ghost: "#9A54A1",
+    ice: "#90E0EF",
+    dragon: "#2EC4B6",
 };
 
 const getData = async () => {
@@ -67,6 +75,7 @@ const mapData = (pokemons) => {
 //Pintar
 const printPokemon = (mappedPokemons) => {
     const container = document.querySelector("#pokeContainer");
+    container.innerHTML = " ";
     mappedPokemons.map((pokemon) => {
         container.innerHTML += `
             <div id="card" class="${pokemon.type}">
@@ -112,16 +121,42 @@ const filter = (pokemonName) => {
     changeColorCard();
 };
 
+
+
+const filterButtonType = () => {
+    const containerFilter = document.querySelector("#filterButton");
+    for (const type in typeColor) {
+        const templateType = `
+            <button class="filter-button" id=${type} style="background: ${typeColor[type]};">
+                ${type}
+            </button>
+        `;
+        containerFilter.innerHTML += templateType;
+    };
+};
+
+const filterType = (pokemonType) => {
+    const filteredPokemons = mappedPokemons.filter((pokemon) => pokemon.type.includes(pokemonType.toLowerCase()));
+    printPokemon(filteredPokemons);
+    changeColorCard();
+};
+
 const addListeners = () => {
-    const searchInput = document.querySelector("#searchInput");
+    const searchInput = document.querySelector(".input");
     searchInput.addEventListener("input", (ev) => {
         document.querySelector("#pokeContainer").innerHTML = "";
         filter(searchInput.value);
     });
+    const filterButton = document.querySelectorAll(".filter-button");
+    filterButton.forEach(buttonfilter => buttonfilter.addEventListener("click", (e) => {
+        const id = e.target.getAttribute("id");
+        filterType(id);
+    }));
 };
 
 export const printTemplate = () => {
     document.querySelector("#app").innerHTML = template();
+    filterButtonType();
     getData();
     addListeners();
 };

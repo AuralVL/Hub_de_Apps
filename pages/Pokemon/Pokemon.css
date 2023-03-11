@@ -1,39 +1,111 @@
-section > h1{
-    color:rgb(56, 56, 56);
-    font-size: 40px;
-    transition: 0.5s ease-in-out;
-    margin-left: 10px;
+
+ .flex-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 16rem;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
 }
-.search{
+.title h3{
+    font-size: 30px;
+    position: relative;
+    z-index: 2;
+}
+.content-bg{
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.content-bg img{
+    z-index: 1;
+    height: 20rem;
+    opacity: 20%;
+    margin: -1.5rem;
+    position: absolute;
+}
+
+#filterButton{
     display: flex;
     justify-content: center;
-    margin: 0 0 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 2;
+    width: 80%;   
 }
-#searchInput{
-    width: 10rem;
-    height: 2rem;
-    text-align: center; 
+
+.filter-button{
+    border: none;
+    transition: .2s ease;
+    border-radius: 15px;
+    height: 2.2rem;
+    width: 5rem;
+    color: whitesmoke;
+    text-transform: capitalize;
+    font-size: .9em;
+    margin: 3px;
+    z-index: 2;
+}
+
+.filter-button:hover{
+    background: none;
+    transform: scale(1.1);
+}
+.filter-button > img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.container-input {
+    position: relative;
+    z-index: 2;
+}
+  
+.input {
+    width: 180px;
+    padding: 10px 0px 10px 40px;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+    outline: none;
+    height: 30px;
+    background: whitesmoke;
+    text-align: center;
+}
+  
+.container-input svg {
+    position: absolute;
+    top: 30%;
+    left: 10px;
+    transform: translate(0, -50%);
+  }
+  
+.input:focus {
+    width: 250px;
 }
 
 #pokeContainer{
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     margin: auto;
+    padding-top: 30px;
+    background: whitesmoke;
 }
 
 #card{
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    margin: 30px;
     align-items: center;
     width: 300px;
     height: 350px;
     box-shadow: 1px 1px 33px -12px rgba(69,69,69,1);
     border-radius: 10px;
-    transition: .5s ease;   
+    transition: .5s ease;    
 }
 
 #card:hover{
@@ -44,6 +116,7 @@ section > h1{
     color: black;
     text-align: center;
     margin-bottom: 5px;
+    text-transform: capitalize;
 }
 
 #card img{
@@ -63,7 +136,7 @@ section > h1{
 #type p{
     text-align: center;
     margin: auto;
-    color: whitesmoke
+    color: whitesmoke;
 }
 
 .hw{
@@ -103,3 +176,27 @@ section > h1{
     border-right: 2px solid black;
 }
 
+@media (min-width: 1200px){
+    #filterButton{
+        width: 50%;
+    }
+}
+@media (max-width: 1500px){
+    .flex-container{
+        height: 16rem;
+     }
+}
+@media (max-width: 600px){
+    .flex-container{
+       height: 20rem;
+    }
+    #filterButton{
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px){
+    .flex-container{
+        height: 23rem;
+    }
+}

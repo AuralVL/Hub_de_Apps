@@ -1,23 +1,44 @@
-/*Arregla estos estilos en cuanto termines*/
 header > div{
     display: flex;
     align-items: center;
     justify-content: flex-end;
     position: relative;
-    height: 10vh;
+    height: 8vh;
     padding-right: 10px;
 }   
-
+#home-btn{
+    border: none;
+}
+#home-btn img{
+    width: 2rem;
+    height: 2rem;
+}
+#home-btn:hover{
+    background: none;
+}
 #colorBtn{
     padding: 0.2rem;
-    border-radius: 7px 7px 7px 7px;
-    -moz-border-radius: 7px 7px 7px 7px;
-    -webkit-border-radius: 7px 7px 7px 7px;
-    filter: opacity(50%);
-    border: 0.5px solid whitesmoke;
-    transition: 0.5s ease-in-out;
+    border: none;
 }
 
 #colorBtn:hover{
-    filter: opacity(100%)
+    background: none;
+}
+
+#colorBtn img{
+    width: 2rem;
+    height: 2rem;
+}
+
+#logout{
+    border: none;
+}
+
+#logout img{
+    width: 2rem;
+    height: 2rem;
+}
+
+#logout:hover{
+    background: none;
 }

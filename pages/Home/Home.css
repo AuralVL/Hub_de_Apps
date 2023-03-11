@@ -1,55 +1,59 @@
-/*Arregla estos estilos en cuanto termines, por el amor de dios*/
-#home{
-    padding: 0 4rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    grid-gap: 5px;
+#home {
+  position: relative;
+  font-size: 100%;
+  font-weight: 400;
+  height: 84vh;
 }
 
-.hello{
-    color:rgb(56, 56, 56);
-    transition: 0.5s ease-in-out;
-    height: 7rem;
-    width: 40rem;
-    font-size: 105px;
-    grid-column: 1;
-    grid-row: 1;
+.flex__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
-.hub{
-    margin: auto;
-    grid-column: 1;
-    grid-row: 1/2;
-    justify-content: center;
+.text--big {
+  color: rgb(56, 56, 56);
+  font-size: 7.8vw;
+  line-height: 8vw;
+  margin-left: -8px;
 }
 
-li{
-    margin: auto;
-    transition: .3s ease-in-out;
-    font-size: 40px;
-    color: rgba(44, 44, 44, 0.884);
+.text--normal {
+  font-size: 1em;
+  color: rgba(56, 56, 56, 0.966);
+  line-height: 22px;
+  margin-top: 25px;
 }
 
-li:hover{
-    transform: scale(1.1);
+.flex__content > button {
+	margin-top: 1rem;
+ 	padding: 10px;
 }
 
-.two{
-    border: 2px solid red;
-    grid-column: 2;
-    grid-row: 1/2;
-    margin-top: auto;
-    width: 600px;
-    height: 600px;
-    justify-content: center;
+.flex__item--left {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  position: relative;
+  background: whitesmoke;
 }
 
-img{
-    grid-column: 2;
-    grid-row: 1/2;
-    margin-top: auto;
-    width: 600px;
-    height: 600px;
-    justify-content: center;
+.flex__content {
+  margin-left: 100px;
+  width: 55%;
+  opacity: 1;
 }
+
+.pokemon__img {
+  position: absolute;
+  bottom: 0;
+  right: 13.5%;
+  max-height: 30vw;
+}
+
