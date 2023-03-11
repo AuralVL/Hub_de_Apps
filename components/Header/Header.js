@@ -3,15 +3,19 @@ import { initContent } from "../../main";
 
 const template = () => `
 <div>
-    <button id="logout">
-        <img src="https://res.cloudinary.com/dbumm5v2e/image/upload/v1678457410/9070509_wcjces.png" alt="logout icon">
-    </button>
-    <button id="colorBtn">
-        <img src="https://res.cloudinary.com/dbumm5v2e/image/upload/v1678452829/7650388_obfqoe.png" alt="change theme icon">
-    </button>
-    <button id="home-btn">
-        <img src="https://res.cloudinary.com/dbumm5v2e/image/upload/v1678563030/8914909_fk2hm0.png" alt="home icon">
-    </button>
+    <div class="container-nav">
+        <button id="logout">
+            <img src="https://res.cloudinary.com/dbumm5v2e/image/upload/v1678457410/9070509_wcjces.png" alt="logout icon">
+        </button>
+        <button id="home-btn">
+            <img src="https://res.cloudinary.com/dbumm5v2e/image/upload/v1678563030/8914909_fk2hm0.png" alt="home icon">
+        </button>
+    </div>
+    <div class="container-theme">
+        <button id="colorBtn">
+            <img src="https://res.cloudinary.com/dbumm5v2e/image/upload/v1678452829/7650388_obfqoe.png" alt="change theme icon">
+        </button>
+    </div>
 </div>
 `
 const addListener = () => {

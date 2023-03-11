@@ -1,10 +1,11 @@
 header > div{
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    gap: .5rem;
     position: relative;
     height: 8vh;
-    padding-right: 10px;
+    opacity: 60%;
 }   
 #home-btn{
     border: none;
@@ -16,8 +17,18 @@ header > div{
 #home-btn:hover{
     background: none;
 }
+.container-nav{
+    width: 50%;
+    padding-left: 14px;
+}
+.container-theme{
+    width: 50%;
+    padding-right: 14px;
+    display: flex;
+    justify-content: flex-end;
+}
+
 #colorBtn{
-    padding: 0.2rem;
     border: none;
 }
 
@@ -26,8 +37,8 @@ header > div{
 }
 
 #colorBtn img{
-    width: 2rem;
-    height: 2rem;
+    width: 1.8rem;
+    height: 1.8rem;
 }
 
 #logout{
